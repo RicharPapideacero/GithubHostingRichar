@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h3>Dato</h3>
+        </div>
+        <div class="col">
+            <input type="text" placeholder="Nombre" (keyup)="guardar($event, txtnombre.value)" #txtnombre>
+            <input type="text" placeholder="Apellido" [(ngModel)]="Apellido" (keyup.enter)="Almacenar()"> 
+            <input type="text" placeholder="Edad" (keyup)="CalcularEdad()" id="txtEdad">
+            <input type="text" placeholder="Ciudad" (keyup.enter)="DarCiudad()" #txtCiudad>
+        </div>
+    </div>
+        <div class="row justify-content-center">
+            <div class="col">
+                Nombre:{{Nombre}}{{Apellido}}-{{Edad}}
+            </div>
+        </div>
+    </div>
